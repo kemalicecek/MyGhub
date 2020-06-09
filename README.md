@@ -9,6 +9,7 @@ Firstly, restarting is not a solution because there are  6 process behind the ap
 - lghub_agent
 - three lghub Helper (I don't know why there is 3 of them)
 - (and lastly) lghub_updater
+
 This one is not killable. It is a service running by root and if you can kill it, it's running again. So you should kill all the other ones and remove updater from services and reload again and start the app. Luckily Automator comes to help at this moment.
 
 # Solution
