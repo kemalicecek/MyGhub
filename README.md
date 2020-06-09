@@ -16,7 +16,16 @@ This one is not killable. It is a service running by root and if you can kill it
 1. Open the Automator from Spotlight
 2. Select "New Document" and "Application"
 3. Search from the upper left "Run Shell Script" and double click or drag and drop it to the right section
-4. copy and paste  the code below 
+4. copy and paste  the code below
+
+killall "lghub" &> /dev/null
+
+pkill -f "lghub" &> /dev/null
+
+launchctl remove com.logi.ghub.updater
+
+launchctl load -w /Library/LaunchDaemons/com.logi.ghub.updater.plist
+
 5. Search from the upper left "Launch Application" and double click or drag and drop it to the right section under the Shell Script block
 6. Click to the dropdown menu and select "Other..." from the bottom
 7. Find and select "Logitech G Hub" 
@@ -25,7 +34,4 @@ This one is not killable. It is a service running by root and if you can kill it
 Now you can put it in your Dock and with one click you can restart Ghub and make it reconnect your devices. 
 
 Hope it works well.
-killall "lghub" &> /dev/null
-pkill -f "lghub" &> /dev/null
-launchctl remove com.logi.ghub.updater
-launchctl load -w /Library/LaunchDaemons/com.logi.ghub.updater.plist
+
