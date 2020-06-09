@@ -18,14 +18,15 @@ This one is not killable. It is a service running by root and if you can kill it
 3. Search from the upper left "Run Shell Script" and double click or drag and drop it to the right section
 4. copy and paste  the code below
 
-`killall "lghub" &> /dev/null
+```
+killall "lghub" &> /dev/null
 
 pkill -f "lghub" &> /dev/null
 
 launchctl remove com.logi.ghub.updater
 
 launchctl load -w /Library/LaunchDaemons/com.logi.ghub.updater.plist
-`
+```
 
 5. Search from the upper left "Launch Application" and double click or drag and drop it to the right section under the Shell Script block
 6. Click to the dropdown menu and select "Other..." from the bottom
